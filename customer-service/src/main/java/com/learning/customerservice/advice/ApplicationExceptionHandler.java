@@ -13,6 +13,7 @@ public class ApplicationExceptionHandler {
     public ProblemDetail handleException(CustomerNotFoundException ex) {
         var problem = ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
         problem.setTitle("Customer not found");
+
         return problem;
     }
 }
